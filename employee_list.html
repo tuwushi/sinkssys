@@ -17,10 +17,6 @@
             <th class="py-2 px-4 border">Job Title</th>
             <th class="py-2 px-4 border">Department</th>
             <th class="py-2 px-4 border">Email</th>
-            <th class="py-2 px-4 border">Contact No.</th>
-            <th class="py-2 px-4 border">Address</th>
-            <th class="py-2 px-4 border">Sex</th>
-            <th class="py-2 px-4 border">Marital Status</th>
             <th class="py-2 px-4 border">Action</th>
           </tr>
         </thead>
@@ -31,10 +27,6 @@
             <td class="py-2 px-4 border">Software Engineer</td>
             <td class="py-2 px-4 border">IT</td>
             <td class="py-2 px-4 border">ivan.petrov@sinksrus.com</td>
-            <td class="py-2 px-4 border">555-6789</td>
-            <td class="py-2 px-4 border">12 Red Square, Moscow</td>
-            <td class="py-2 px-4 border">Male</td>
-            <td class="py-2 px-4 border">Single</td>
             <td class="py-2 px-4 border">
               <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="openModal('Ivan Petrov', 'Software Engineer', 'IT', 'ivan.petrov@sinksrus.com', '555-6789', '12 Red Square, Moscow', 'Male', 'Single')">Info</button>
             </td>
@@ -45,10 +37,6 @@
             <td class="py-2 px-4 border">Marketing Manager</td>
             <td class="py-2 px-4 border">Marketing</td>
             <td class="py-2 px-4 border">pedro_los_banos@sinksrus.com</td>
-            <td class="py-2 px-4 border">555-1234</td>
-            <td class="py-2 px-4 border">123 Mabini St</td>
-            <td class="py-2 px-4 border">Male</td>
-            <td class="py-2 px-4 border">Married</td>
             <td class="py-2 px-4 border">
               <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="openModal('Pedro Los Baños', 'Marketing Manager', 'Marketing', 'pedro_los_banos@sinksrus.com', '555-1234', '123 Mabini St', 'Male', 'Married')">Info</button>
             </td>
@@ -59,10 +47,6 @@
             <td class="py-2 px-4 border">HR Specialist</td>
             <td class="py-2 px-4 border">HR</td>
             <td class="py-2 px-4 border">ana.gomez@sinksrus.com</td>
-            <td class="py-2 px-4 border">555-1526</td>
-            <td class="py-2 px-4 border">456 Rizal St</td>
-            <td class="py-2 px-4 border">Female</td>
-            <td class="py-2 px-4 border">Divorced</td>
             <td class="py-2 px-4 border">
               <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="openModal('Ana Gómez', 'HR Specialist', 'HR', 'ana.gomez@sinksrus.com', '555-1526', '456 Rizal St', 'Female', 'Divorced')">Info</button>
             </td>
@@ -73,10 +57,6 @@
             <td class="py-2 px-4 border">Sales Associate</td>
             <td class="py-2 px-4 border">Sales</td>
             <td class="py-2 px-4 border">john.wu@sinksrus.com</td>
-            <td class="py-2 px-4 border">555-6925</td>
-            <td class="py-2 px-4 border">123 Mabini St</td>
-            <td class="py-2 px-4 border">Male</td>
-            <td class="py-2 px-4 border">Single</td>
             <td class="py-2 px-4 border">
               <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="openModal('John Wu', 'Sales Associate', 'Sales', 'john.wu@sinksrus.com', '555-6925', '123 Mabini St', 'Male', 'Single')">Info</button>
             </td>
@@ -87,10 +67,6 @@
             <td class="py-2 px-4 border">CEO</td>
             <td class="py-2 px-4 border">Admin</td>
             <td class="py-2 px-4 border">emma@sinksrus.com</td>
-            <td class="py-2 px-4 border">555-1111</td>
-            <td class="py-2 px-4 border">456 Rizal St</td>
-            <td class="py-2 px-4 border">Female</td>
-            <td class="py-2 px-4 border">Married</td>
             <td class="py-2 px-4 border">
               <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="openModal('Emma Wilson', 'CEO', 'Admin', 'emma@sinksrus.com', '555-1111', '456 Rizal St', 'Female', 'Married')">Info</button>
             </td>
@@ -114,3 +90,28 @@
       <button class="bg-red-500 text-white px-4 py-2 rounded" onclick="closeModal()">Close</button>
     </div>
   </div>
+
+  <!-- JavaScript Code to Control Modal -->
+  <script>
+    // Function to open modal and display employee information
+    function openModal(name, jobTitle, department, email, contact, address, sex, maritalStatus) {
+      document.getElementById('modalName').textContent = name;
+      document.getElementById('modalJobTitle').textContent = "Job Title: " + jobTitle;
+      document.getElementById('modalDepartment').textContent = "Department: " + department;
+      document.getElementById('modalEmail').textContent = "Email: " + email;
+      document.getElementById('modalContact').textContent = "Contact No.: " + contact;
+      document.getElementById('modalAddress').textContent = "Address: " + address;
+      document.getElementById('modalSex').textContent = "Sex: " + sex;
+      document.getElementById('modalMaritalStatus').textContent = "Marital Status: " + maritalStatus;
+
+      // Show the modal
+      document.getElementById('employeeModal').classList.remove('hidden');
+    }
+
+    // Function to close the modal
+    function closeModal() {
+      document.getElementById('employeeModal').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
